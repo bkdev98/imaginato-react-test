@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# Imaginato React Test
+
+## Live Demo
+
+- CodeSandbox: [TODO]
+
+- Netlify: [TODO]
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
