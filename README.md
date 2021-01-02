@@ -2,9 +2,9 @@
 
 ## Live Demo
 
-- CodeSandbox: [TODO]
+- CodeSandbox: [https://codesandbox.io/s/imaginato-react-test-khanh-okpet](https://codesandbox.io/s/imaginato-react-test-khanh-okpet)
 
-- Netlify: [TODO]
+- Netlify: [https://imaginato-react-test-khanh.netlify.app/](https://imaginato-react-test-khanh.netlify.app/)
 
 ## Getting Started with Create React App
 
