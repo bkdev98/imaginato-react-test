@@ -12,6 +12,9 @@ const Wrapper = styled.div`
   align-items: center;
   margin-bottom: 15px;
   background-color: ${props => props.theme.background};
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
 `;
 
 interface RankCountProps {
@@ -28,6 +31,9 @@ const RankCount = styled.span<RankCountProps>`
     font-size: 0.5em;
     vertical-align: top;
     margin-left: 2px;
+  }
+  @media (max-width: 768px) {
+    min-width: 35px;
   }
 `;
 
@@ -54,6 +60,9 @@ const AvatarWrapper = styled.div<AvatarWrapperProps>`
   background-color: ${props => props.theme.rankColors[props.index] || props.theme.rankDefault};
   border-top-left-radius: .5rem;
   border-bottom-left-radius: .5rem;
+  @media (max-width: 768px) {
+    padding: 4px 25px;
+  }
 `;
 
 const Label = styled.span`
@@ -72,7 +81,10 @@ const DisplayName = styled.span`
 
 const ScoreWrapper = styled.span`
   margin-right: 15px;
-  width: 70px;
+  min-width: 70px;
+  @media (max-width: 768px) {
+    min-width: 55px;
+  }
 `;
 
 interface StreamerItemProps {

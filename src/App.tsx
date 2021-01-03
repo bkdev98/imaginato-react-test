@@ -16,11 +16,14 @@ const GlobalStyle = createGlobalStyle<{theme: ThemeType}>`
     -moz-osx-font-smoothing: grayscale;
     background-color: ${props => props.theme.backdrop};
     color: ${props => props.theme.text};
+    @media (max-width: 768px) {
+      font-size: 0.9em;
+    }
   }
 `
 
 const Wrapper = styled.div`
-  padding: 0 15px;
+  padding: 0 10px;
 `;
 
 const Container = styled.div`
@@ -29,6 +32,9 @@ const Container = styled.div`
   padding: 15px 0;
   background-color: ${props => props.theme.background};
   border-radius: 24px;
+  @media (max-width: 768px) {
+    padding: 10px 0;
+  }
 `;
 
 const Title = styled.h1`

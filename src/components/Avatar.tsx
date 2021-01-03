@@ -14,6 +14,10 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 768px) {
+    width: 42px;
+    height: 42px;
+  }
 `;
 
 const MultiAvatar = styled.img`
@@ -22,6 +26,10 @@ const MultiAvatar = styled.img`
   border-radius: 50%;
   object-fit: contain;
   background-color: ${props => props.theme.background};
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 const Avatar: React.FC<AvatarProps> = ({displayName, ...props}) => {

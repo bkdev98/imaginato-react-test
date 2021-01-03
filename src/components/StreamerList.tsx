@@ -6,6 +6,9 @@ import calcBoundingRects from '../utils/calcBoundingRects';
 
 const Wrapper = styled.div`
   padding: 0 15px;
+  @media (max-width: 768px) {
+    padding: 0 10px;
+  }
 `;
 
 interface StreamerListProps {
