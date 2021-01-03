@@ -1,5 +1,27 @@
 import React from "react";
 
+function getAbsoluteBoundingRect(node: any) {
+  const rect = node.getBoundingClientRect();
+
+  let offsetX = window.pageXOffset;
+  let offsetY = window.pageYOffset;
+  let parent = node.parentNode;
+  
+  while (parent && parent !== document.body) {
+    offsetX += parent.scrollLeft;
+    offsetY += parent.scrollTop;
+    parent = parent.parentNode;
+  }
+
+  return {
+    ...rect,
+    top   : rect.top + offsetY,
+    left  : rect.left + offsetX,
+    bottom: rect.bottom + offsetY,
+    right : rect.right + offsetX,
+  };
+}
+
 const calcBoundingRects = (children: any) => {
   let boundingRects = {};
 
@@ -8,7 +30,7 @@ const calcBoundingRects = (children: any) => {
     
     boundingRects = {
       ...boundingRects,
-      [child.key]: childNode.getBoundingClientRect(),
+      [child.key]: getAbsoluteBoundingRect(childNode),
     }
   });
 
