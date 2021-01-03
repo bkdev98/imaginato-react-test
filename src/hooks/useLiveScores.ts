@@ -7,8 +7,8 @@ function useLiveScores(defaultScores: IStreamer[]) {
   const [scores, setScores] = useState(defaultScores);
 
   function updateScore() {
-    setScores(
-      scores
+    setScores(newScores =>
+      newScores
         .map(item => ({...item, score: item.score + getRandomNum(0, 2000)}))
         .sort((a, b) => b.score - a.score)
     );
